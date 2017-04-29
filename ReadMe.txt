@@ -1,8 +1,10 @@
+
+ ChessGames(Console Application)
+ 
+ Implements  Reversi Game, MagicSquare and NineAlmonds Game using C++
+
 ========================================================================
-    CONSOLE APPLICATION : Lab4G Project Overview
-========================================================================
-Team members: Novi Wang, Eason Chen
-1. The NineAlmonds Game works well as before. 
+1. The NineAlmonds Game works well. 
 When enter "[projectname] NineAlmonds", the game board shows up.
 You can play it by inputing coordinate, for example, you enter 2,2 for the start position and 2,0 for end.
 4
@@ -36,15 +38,9 @@ Tip: Please input two valid coordinates
 prompt:
 1.Input a valid coordinate of a square on the board, such as (x,x)
 2. Quit the game(Input 'quit')
-**************************************************
-For this game, we just use the copy-assignment operator when assigning The nine almonds game to the base game. We don't need 
-any copy constructor, move sonstructor or destructor as we don't need to copy or refer the nine almonds game object. We have 
-a method that initialize everything. We just call this function when we need a new game. We don't have move
-assignment as we don't need to set an object’s value by transferring the implementation from the r-value reference passed to it.
-In our design, it's unnecessary to create multiple NineAlmonds objects. So we just use copy assignment operator.
 
 
-2. The MagicSquare Game works good as before.
+2. The MagicSquare Game also works good.
 When enter "[projectname] MagicSquare", the game board shows up.
 You can play it by inputing coordinate and value, for example, you enter 0,0 then enter 4.
 ***************************
@@ -82,12 +78,7 @@ Available pieces: 1 2 3 5 6 7 8 9
 prompt:
 1.Input a valid coordinate of a square on the board, such as (x,x)
 2. Quit the game(Input 'quit')
-**************************************************************
-For this game, we also just use the copy-assignment operator when assigning magicsquare game to the base game. We don't need 
-any copy constructor, move sonstructor or destructor as we don't need to copy or refer the MagicSquare game object. We also 
-don't have move assignment as we don't need to set an object’s value by transferring the implementation from the r-value reference passed to it.
-As before, in our design, it's unnecessary to create multiple MagicSquare objects or refering and copying it. We just read from 
-file and reset the variables. So we just use copy assignment operator.
+
 
 3. Reversi Game also works good.
 When enter "[projectname] Reversi player1 player2", the game board shows up. The third command is the name for first player and
@@ -181,49 +172,6 @@ The game keeps going until No empty place left in the game board, and the person
 X 0 1 2 3 4 5 6 7
 
 60 turns it took to complete the game successfully
-*********************************************************
-For this game, although there are two players, we still just use the copy-assignment operator when assigning reversi game to 
-the base game. We don't need any copy constructor, move sonstructor or destructor as we don't need to copy or refer the 
-Reversi game object. We also don't have move assignment as we don't need to set an object’s value by transferring the implementation 
-from the r-value reference passed to it. As before, in our design, it's unnecessary to create multiple Reversi objects or refering
- and copying it. We just read from file, get the previous two players and the one who is going to play. The file also have aline
-that holds all game piece displays. So we just need to read the line and recreate the gamepiece array. Also, the initialize function
-handles everything when we need a new game.
-========================================================================
 
-AppWizard has created this Lab4G application for you.
-
-This file contains a summary of what you will find in each of the files that
-make up your Lab4G application.
-
-
-Lab4G.vcxproj
-    This is the main project file for VC++ projects generated using an Application Wizard.
-    It contains information about the version of Visual C++ that generated the file, and
-    information about the platforms, configurations, and project features selected with the
-    Application Wizard.
-
-Lab4G.vcxproj.filters
-    This is the filters file for VC++ projects generated using an Application Wizard. 
-    It contains information about the association between the files in your project 
-    and the filters. This association is used in the IDE to show grouping of files with
-    similar extensions under a specific node (for e.g. ".cpp" files are associated with the
-    "Source Files" filter).
-
-Lab4G.cpp
-    This is the main application source file.
-
-/////////////////////////////////////////////////////////////////////////////
-Other standard files:
-
-StdAfx.h, StdAfx.cpp
-    These files are used to build a precompiled header (PCH) file
-    named Lab4G.pch and a precompiled types file named StdAfx.obj.
-
-/////////////////////////////////////////////////////////////////////////////
-Other notes:
-
-AppWizard uses "TODO:" comments to indicate parts of the source code you
-should add to or customize.
 
 /////////////////////////////////////////////////////////////////////////////
